@@ -44,19 +44,19 @@ body {
   text-shadow: 0 0 10px #000000;
   user-select: none;
   padding: 10px;
+}
 
-  .credit__heart {
-    color: red;
-  }
+.credit__heart {
+  color: red;
+}
 
-  a {
-    color: #add8e6;
-    text-decoration: none;
-  }
+.credit a {
+  color: #add8e6;
+  text-decoration: none;
+}
 
-  a:hover {
-    text-decoration: underline;
-  }
+.credit a:hover {
+  text-decoration: underline;
 }
 
 .credit:hover {
@@ -78,7 +78,7 @@ canvas {
   transform: translate(-50%, -50%);
   color: white;
   text-align: center;
-  font-size: 4vw;
+  font-size: 5vw; /* Using viewport width units for responsiveness */
   text-shadow: 0 0 5px #000000;
   user-select: none;
   pointer-events: none;
@@ -91,8 +91,21 @@ canvas {
     0 0 50px #ff0, 0 0 60px #ff0, 0 0 70px #ff0;
 }
 
-@media all and (min-width: 640px) {
+/* Media queries for better responsiveness on different screen sizes */
+@media (min-width: 640px) {
   .name {
-    font-size: 45px;
+    font-size: 4vw; /* Adjusting font size for larger screens */
+  }
+}
+
+@media (min-width: 1024px) {
+  .name {
+    font-size: 3vw; /* Further adjusting for very large screens */
+  }
+}
+
+@media (max-width: 639px) {
+  .name {
+    font-size: 6vw; /* Slightly larger font for smaller screens */
   }
 }
